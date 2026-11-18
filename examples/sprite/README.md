@@ -1,0 +1,13 @@
+# Audio Sprite Visual ([Live Demo](https://howlerjs.com/#sprite))
+
+![Audio Sprite Visual](https://s3.amazonaws.com/howler.js/screenshot-sprite.jpg "Sprite Screenshot")
+
+## Description
+This example visualizes how audio sprites work and demonstrates how they can be used within howler.js. Click on a sprite on the waveform to play it back and watch the progress (multiple clicks will overlap sounds).
+
+* Audio sprite support with single audio file.
+* Displays playback progress of sprites in real-time.
+* Allows playback of multiple sprites on top of each other.
+* Full-screen and responsive for desktop/mobile.
+
+Open index.html in a browser.
