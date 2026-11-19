@@ -10,9 +10,56 @@
   <!-- Game Canvas -->
   <canvas id="canvas" width="1" height="1">
 
+  <!-- Sample-locked storm scene readout -->
+  <div id="hud">
+    <div class="hud-row">
+      <span class="hud-label">场景采样点 SCENE SAMPLE</span>
+      <span id="hud-sample" class="hud-value">0</span>
+    </div>
+    <div class="hud-row">
+      <span class="hud-label">状态 STATE</span>
+      <span id="hud-state" class="hud-value">等待解码 LOADING</span>
+    </div>
+    <div class="hud-row hud-loudness">
+      <span class="hud-label">雨 RAIN</span><span id="hud-rain" class="hud-value">0.0000</span>
+    </div>
+    <div class="hud-row hud-loudness">
+      <span class="hud-label">雷 THUNDER</span><span id="hud-thunder" class="hud-value">0.0000</span>
+    </div>
+    <div class="hud-row hud-loudness">
+      <span class="hud-label">闪电 LIGHTNING</span><span id="hud-lightning" class="hud-value">0.0000</span>
+    </div>
+    <div class="hud-row hud-loudness">
+      <span class="hud-label">喇叭 SPEAKER</span><span id="hud-speaker" class="hud-value">0.0000</span>
+    </div>
+    <div class="hud-row">
+      <button id="hud-pause" type="button" disabled>暂停 PAUSE</button>
+    </div>
+    <div class="hud-row hud-control">
+      <label for="hud-rain-bus">雨总线 RAIN BUS</label>
+      <input id="hud-rain-bus" type="range" min="0" max="1" step="0.01" value="1" disabled>
+      <span id="hud-rain-bus-val" class="hud-mini">1.00</span>
+    </div>
+    <div class="hud-row hud-control">
+      <label for="hud-storm-bus">雷电总线 STORM BUS</label>
+      <input id="hud-storm-bus" type="range" min="0" max="1" step="0.01" value="1" disabled>
+      <span id="hud-storm-bus-val" class="hud-mini">1.00</span>
+    </div>
+    <div class="hud-row hud-control">
+      <label for="hud-speaker-bus">喇叭总线 SPEAKER BUS</label>
+      <input id="hud-speaker-bus" type="range" min="0" max="1" step="0.01" value="1" disabled>
+      <span id="hud-speaker-bus-val" class="hud-mini">1.00</span>
+    </div>
+    <div class="hud-row">
+      <span class="hud-label">场景速率 SCENE RATE</span>
+      <button id="hud-rate" type="button" class="hud-rate-btn" disabled>1.0x</button>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="../../src/howler.core.js"></script>
   <script src="../../src/plugins/howler.spatial.js"></script>
+  <script src="./js/scene.js"></script>
   <script src="./js/sound.js"></script>
   <script src="./js/player.js"></script>
   <script src="./js/controls.js"></script>
@@ -20,5 +67,6 @@
   <script src="./js/map.js"></script>
   <script src="./js/camera.js"></script>
   <script src="./js/game.js"></script>
+  <script src="./js/hud.js"></script>
 </body>
 </html>
