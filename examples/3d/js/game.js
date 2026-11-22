@@ -43,7 +43,13 @@ Game.prototype = {
     // Update the different components of the scene.
     this.map.update(ms / 1000);
     this.player.update(ms / 1000);
+    this.audio.update();
     this.camera.render(this.player, this.map);
+
+    // Refresh the on-screen audio readout.
+    if (this.hud) {
+      this.hud.update();
+    }
 
     // Continue the game loop.
     requestAnimationFrame(this.tick.bind(this));
@@ -55,3 +61,9 @@ var game = new Game();
 
 // Generate the new map.
 game.map.setup();
+
+// All speaker tiles are registered now; start rain and music together.
+game.audio.begin();
+
+// Add the on-screen scene sample / loudness readout with a pause control.
+game.hud = new Hud(game);

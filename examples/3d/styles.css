@@ -23,3 +23,78 @@ body {
   width: 100%;
   height: 100%;
 }
+
+#hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 12px 14px;
+  min-width: 230px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  color: #fff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  pointer-events: auto;
+}
+
+#hud .hud-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  white-space: nowrap;
+}
+
+#hud .hud-label {
+  color: #9fd1ff;
+  letter-spacing: 0.5px;
+}
+
+#hud .hud-value {
+  color: #fff;
+  font-weight: bold;
+}
+
+#hud-pause {
+  width: 100%;
+  margin: 10px 0 8px;
+  padding: 6px 0;
+  background: #1f6feb;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#hud-pause:active {
+  background: #1158c7;
+}
+
+#hud .hud-control {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #9fd1ff;
+}
+
+#hud .hud-control label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#hud .hud-control input[type="range"] {
+  flex: 1;
+}
+
+#hud .hud-control .hud-value {
+  min-width: 32px;
+  text-align: right;
+}
